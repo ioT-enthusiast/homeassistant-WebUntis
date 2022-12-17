@@ -390,7 +390,7 @@ class WebUntis:
                         CalendarEvent(
                             start=lesson.start.astimezone(),
                             end=lesson.end.astimezone(),
-                            summary=lesson.subjects[0].long_name,
+                            summary=lesson.subjects[0].name, #workaround ohg
                             location=lesson.rooms[0].long_name, #add Room as location
                             description=self.get_lesson_json(lesson),
                         )
